@@ -1,9 +1,6 @@
-// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
+// Fill out your copyright notice in the Description page of Project Settings.
 
-#ifndef __BONDSII_H__
-#define __BONDSII_H__
+#pragma once
 
-#include "EngineMinimal.h"
+#include "Engine.h"
 
-
-#endif

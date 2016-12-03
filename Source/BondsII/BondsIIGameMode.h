@@ -1,16 +1,19 @@
-// Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
+// Fill out your copyright notice in the Description page of Project Settings.
+
 #pragma once
+
 #include "GameFramework/GameMode.h"
 #include "BondsIIGameMode.generated.h"
 
-UCLASS(minimalapi)
-class ABondsIIGameMode : public AGameMode
+/**
+ * 
+ */
+UCLASS()
+class BONDSII_API ABondsIIGameMode : public AGameMode
 {
 	GENERATED_BODY()
-
-public:
-	ABondsIIGameMode();
+	
+	
+	
+	
 };
-
-
-
