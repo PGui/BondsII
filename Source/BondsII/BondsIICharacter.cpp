@@ -51,6 +51,10 @@ ABondsIICharacter::ABondsIICharacter()
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+
+	HandLeft = CreateDefaultSubobject<UHand>(TEXT("LeftHand"));
+	
+	HandRight = CreateDefaultSubobject<UHand>(TEXT("RightHand"));
 }
 
 void ABondsIICharacter::BeginPlay()
@@ -88,6 +92,8 @@ void ABondsIICharacter::SetupPlayerInputComponent(class UInputComponent* InputCo
 	InputComponent->BindAxis("TurnRate", this, &ABondsIICharacter::TurnAtRate);
 	InputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	InputComponent->BindAxis("LookUpRate", this, &ABondsIICharacter::LookUpAtRate);
+
+	
 }
 
 void ABondsIICharacter::OnFire()

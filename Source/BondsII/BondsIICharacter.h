@@ -1,6 +1,7 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/Character.h"
+#include "BondsII/Gameplay/Systems/Interaction/Hand.h"
 #include "BondsIICharacter.generated.h"
 
 class UInputComponent;
@@ -25,6 +26,14 @@ class ABondsIICharacter : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
+	
+	UPROPERTY(VisibleDefaultsOnly, Category = Hand)
+	class UHand* HandLeft;
+
+	UPROPERTY(VisibleDefaultsOnly, Category = Hand)
+	class UHand* HandRight;
+
+
 public:
 	ABondsIICharacter();
 
@@ -89,6 +98,7 @@ protected:
 	void EndTouch(const ETouchIndex::Type FingerIndex, const FVector Location);
 	void TouchUpdate(const ETouchIndex::Type FingerIndex, const FVector Location);
 	TouchData	TouchItem;
+
 	
 protected:
 	// APawn interface

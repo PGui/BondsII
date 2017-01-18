@@ -3,3 +3,4 @@
 #include "BondsII.h"
 
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, BondsII, "BondsII" );
+DEFINE_LOG_CATEGORY(BondsLog);
